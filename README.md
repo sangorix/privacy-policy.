@@ -3,46 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demande de Suppression de Données</title>
+    <title>Demande de Suppression de Données Personnelles</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            padding: 40px;
-            background-color: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f4f8;
+            margin: 0;
+            padding: 40px 20px;
         }
         .container {
-            max-width: 500px;
+            max-width: 600px;
             margin: auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background: #fff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
-        h2 {
+        h1 {
             text-align: center;
             color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+        form {
+            margin-top: 20px;
         }
         label {
-            font-weight: bold;
-            margin-top: 10px;
             display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+            color: #444;
         }
         input, textarea {
             width: 100%;
             padding: 10px;
-            margin-top: 5px;
-            margin-bottom: 15px;
+            font-size: 1rem;
+            border-radius: 6px;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            box-sizing: border-box;
         }
         button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
             background-color: #d9534f;
             color: white;
-            padding: 10px 20px;
             border: none;
-            border-radius: 5px;
+            border-radius: 6px;
+            font-size: 1rem;
             cursor: pointer;
-            width: 100%;
+            transition: background-color 0.3s ease;
         }
         button:hover {
             background-color: #c9302c;
@@ -50,22 +63,23 @@
     </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Demande de Suppression de Données</h1>
+        <p>
+            Conformément au Règlement Général sur la Protection des Données (RGPD), vous pouvez demander la suppression de vos données personnelles en remplissant le formulaire ci-dessous.
+        </p>
+        <form action="#" method="post">
+            <label for="nom">Nom complet</label>
+            <input type="text" id="nom" name="nom" required>
 
-<div class="container">
-    <h2>Demande de Suppression de Données</h2>
-    <form action="traitement.php" method="POST">
-        <label for="nom">Nom complet :</label>
-        <input type="text" id="nom" name="nom" required>
+            <label for="email">Adresse e-mail</label>
+            <input type="email" id="email" name="email" required>
 
-        <label for="email">Adresse e-mail :</label>
-        <input type="email" id="email" name="email" required>
+            <label for="raison">Motif de la demande</label>
+            <textarea id="raison" name="raison" rows="5" placeholder="Expliquez la raison de votre demande..." required></textarea>
 
-        <label for="raison">Raison de la demande :</label>
-        <textarea id="raison" name="raison" rows="4" placeholder="Expliquez pourquoi vous souhaitez supprimer vos données..." required></textarea>
-
-        <button type="submit">Envoyer la Demande</button>
-    </form>
-</div>
-
+            <button type="submit">Envoyer la demande</button>
+        </form>
+    </div>
 </body>
 </html>
